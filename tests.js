@@ -64,3 +64,36 @@ describe('isFive', function() {
         expect(isFive("5")).toBe(false)
     });
 });
+
+describe('isEven', function() {
+    it('should be a defined function', function() {
+        expect(typeof isEven).toBe("function");
+    });
+    it('should return a boolean', function(){
+        expect(typeof isEven()).toBe("boolean");
+    });
+    it('should return true when the parameter is equal to 2', function() {
+        expect(isEven(2)).toBe(true);
+    });
+    it('should return true when the parameter is equal to -4', function() {
+        expect(isEven(-4)).toBe(true);
+    });
+    it('should return false when the parameter is equal to 3', function() {
+        expect(isEven(3)).toBe(false);
+    });
+    it('should return false when the parameter is equal to "banana"', function() {
+        expect(isEven("banana")).toBe(false);
+    });
+    it('should return true when the parameter is equal to "8"', function() {
+        expect(isEven("8")).toBe(true);
+    });
+    it('should return false when the parameter is equal to Infinity', function() {
+        expect(isEven(Infinity)).toBe(false);
+    });
+    it('should return false when the parameter is equal to a boolean', function() {
+        expect(isEven(Boolean)).toBe(false);
+    });
+    it('should return false when function is called without a parameter', function() {
+        expect(isEven()).toBe(false);
+    });
+});

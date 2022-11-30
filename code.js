@@ -21,3 +21,11 @@ function isFive (param) {
         return false;
     }
 }
+
+function isEven (param) {
+    if(param % 2 === 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
