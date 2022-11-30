@@ -7,5 +7,9 @@ const helloWorld = function() {
 }
 
 function sayHello(input) {
-    return "Hello, " + input + "!";
+    if(typeof(input) !== "string"){
+        return helloWorld();
+    } else {
+            return "Hello, " + input + "!";
+    }
 }

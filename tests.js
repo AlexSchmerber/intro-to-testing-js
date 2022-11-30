@@ -22,12 +22,30 @@ describe('sayHello', function() {
         expect(typeof sayHello()).toBe("string")
     });
     it('should return the string "Hello, Jane!" when called with Jane as an parameter', function() {
-        expect(sayHello("Jane")).toBe("Hello, Jane!")
+        expect(sayHello("Jane")).toBe("Hello, Jane!");
     });
     it('should return the string "Hello, Alex!" when called with "Alex" as an parameter', function() {
-        expect(sayHello("Alex")).toBe("Hello, Alex!")
+        expect(sayHello("Alex")).toBe("Hello, Alex!");
     });
     it('should return the string "Hello, Pat!" when called with "Pat" as a parameter', function() {
-        expect(sayHello("Pat")).toBe("Hello, Pat!")
+        expect(sayHello("Pat")).toBe("Hello, Pat!");
     });
-})
+    it('should return the string "Hello, World!" when parameter is undefined', function() {
+        expect(sayHello()).toBe("Hello, World!");
+    });
+    it('should return the string "Hello, World!" when the parameter is equal to the boolean true', function() {
+        expect(sayHello(true)).toBe("Hello, World!");
+    });
+    it('should return the string "Hello, World!" when the parameter is equal to the boolean false', function() {
+        expect(sayHello(false)).toBe("Hello, World!");
+    });
+    it('should return the string "Hello, World!" when parameter is null', function() {
+        expect(sayHello(null)).toBe("Hello, World!");
+    });
+    it('should return the string "Hello, World!" when the parameter is equal to the number 21', function() {
+        expect(sayHello(21)).toBe("Hello, World!");
+    });
+    it('should return the string "Hello, World!" when the parameter is equal to an object', function() {
+        expect(sayHello(Object)).toBe("Hello, World!");
+    });
+});
