@@ -30,6 +30,6 @@ function isEven (param) {
     }
 }
 
-function isVowel () {
-
+function isVowel (char) {
+    return char === "a"
 }
