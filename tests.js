@@ -97,7 +97,8 @@ describe('isEven', function() {
         expect(isEven()).toBe(false);
     });
 });
-
+vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
+// let vowels = "aeiouAEIOU";
 describe("isVowel", function() {
     it('should be a defined function', function() {
         expect(typeof isVowel).toBe("function");
@@ -105,7 +106,13 @@ describe("isVowel", function() {
     it('should return a boolean value', function() {
         expect(typeof isVowel()).toBe("boolean")
     });
-    it('should return a boolean value', function() {
+    it('should return the boolean value true when "a" is the parameter', function() {
         expect(isVowel("a")).toBe(true)
     });
+    it('should return the boolean value true when "E" is the parameter', function() {
+        expect(isVowel("E")).toBe(true)
+    });
+    it('should return the boolean value true when any vowel is the parameter', function() {
+        expect(isVowel(vowels))
+    })
 });

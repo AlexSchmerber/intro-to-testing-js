@@ -31,5 +31,8 @@ function isEven (param) {
 }
 
 function isVowel (char) {
-    return char === "a"
+    if (vowels.includes(char)){
+        return true
+    }
+    return false
 }
