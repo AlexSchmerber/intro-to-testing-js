@@ -30,9 +30,13 @@ function isEven (param) {
     }
 }
 
+
 function isVowel (char) {
+    let vowels = "aeiouAEIOU"
     if (vowels.includes(char)){
         return true
     }
     return false
 }
+
+function add () {}

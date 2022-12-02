@@ -97,8 +97,7 @@ describe('isEven', function() {
         expect(isEven()).toBe(false);
     });
 });
-vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
-// let vowels = "aeiouAEIOU";
+
 describe("isVowel", function() {
     it('should be a defined function', function() {
         expect(typeof isVowel).toBe("function");
@@ -109,10 +108,28 @@ describe("isVowel", function() {
     it('should return the boolean value true when "a" is the parameter', function() {
         expect(isVowel("a")).toBe(true)
     });
-    it('should return the boolean value true when "E" is the parameter', function() {
-        expect(isVowel("E")).toBe(true)
+    it('should return the boolean value true when "A" is the parameter', function() {
+        expect(isVowel("A")).toBe(true)
     });
-    it('should return the boolean value true when any vowel is the parameter', function() {
-        expect(isVowel(vowels))
+    it('should return the boolean value true when "y" is the parameter', function() {
+        expect(isVowel("y")).toBe(false)
+    });
+    it('should return the boolean value true when 4 is the parameter', function() {
+        expect(isVowel(4)).toBe(false)
+    });
+    it('should return false when a boolean is passed as the parameter', function() {
+        expect(isVowel(Boolean)).toBe(false)
+    })
+    it('should return false when "banana" is passed as the parameter', function() {
+        expect(isVowel("banana")).toBe(false)
+    })
+    it('should return false when nothing is passed as the parameter', function() {
+        expect(isVowel()).toBe(false)
     })
 });
+
+describe("add", function() {
+    it("should be a declared function", function () {
+        expect(typeof(add)).toBe("function");
+    })
+})
