@@ -132,4 +132,28 @@ describe("add", function() {
     it("should be a declared function", function () {
         expect(typeof(add)).toBe("function");
     })
+    it("should return a number or NaN", function() {
+        expect(typeof add()).toBe("number" || "NaN")
+    })
+    it("should return 5 when 2 and 3 are passed as parameters", function(){
+        expect(add(2, 3)).toBe(5)
+    })
+    it("should return -12 when -9 and -3 are passed as parameters", function () {
+        expect(add(-9, -3)).toBe(-12)
+    })
+    it("should return 11 when '5' and 6 are passed as parameters", function () {
+        expect(add('5', 6)).toBe(11)
+    })
+    it("should return 6 when '-4' and '10' are passed as parameters", function () {
+        expect(add('-4', 10)).toBe(6)
+    })
+    it("should return NaN when 'banana' and 'split' are passed as parameters", function () {
+        expect((add('banana', 'split')).toString()).toBe('NaN')
+    })
+    it("should return NaN when 2 and 'apples' are passed as parameters", function () {
+        expect((add(2, 'apples')).toString()).toBe('NaN')
+    })
+    it('should return NaN when no parameter is passed', function(){
+        expect(add().toString()).toBe('NaN')
+    })
 })

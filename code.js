@@ -39,4 +39,7 @@ function isVowel (char) {
     return false
 }
 
-function add () {}
+function add (firstNum, secondNum) {
+    return parseFloat(firstNum * 1 + secondNum * 1)
+}
+
